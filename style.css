@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
+
+:root {
+  --clr-cyan-100: 179, 62%, 43%;
+  --clr-bright-100: 71, 73%, 54%;
+  --clr-light-gray-100: 204, 43%, 93%;
+  --clr-grayish-blue-100: 218, 22%, 67%;
+  --clr-border: 224, 30%, 27%;
+
+  --fn-400: 400;
+  --fn-500: 500;
+  --fn-600: 600;
+  --fn-700: 700;
+
+  --size: 16px;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: "Karla", sans-serif;
+  background-color: hsl(206, 47%, 93%);
+}
+.community-box {
+  display: grid;
+  text-align: start;
+  max-width: 700px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.row-1 {
+  border-radius: 2% 2% 0% 0%;
+  padding: 2.5rem 3rem 1.6rem 2rem;
+  background-color: rgb(255, 255, 255);
+}
+
+.row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.col {
+  background-color: hsl(var(--clr-cyan-100));
+  color: hsl(var(--clr-light-gray-100));
+}
+
+.clr-1 {
+  padding: 1rem 2rem 2.2rem 3.5rem;
+  border-radius: 0% 0% 0% 2%;
+  background-color: hsl(var(--clr-cyan-100));
+}
+
+.clr-2 {
+  padding: 1rem 2rem 2.2rem 3.5rem;
+  border-radius: 0% 0% 2% 0%;
+  background-color: hsl(var(--clr-cyan-100), 0.9);
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: hsl(var(--clr-cyan-100), 0.8);
+  margin-bottom: 1.2rem;
+  font-weight: var(--fn-700);
+}
+
+.tutorial {
+  line-height: 1.4;
+  color: rgb(179, 240, 240);
+  font-size: 0.9rem;
+  font-weight: lighter;
+}
+
+.moneyback-gurrantee {
+  color: hsl(var(--clr-bright-100));
+  font-weight: var(--fn-600);
+  margin-bottom: 1rem;
+}
+
+.description {
+  display: flex;
+  color: rgb(181, 185, 187);
+  font-size: 0.9rem;
+  font-weight: var(--fn-500);
+  margin-bottom: 0.6rem;
+}
+
+.description-titles {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: var(--fn-600);
+}
+
+.price-description .span-1 {
+  font-size: 2rem;
+  font-weight: var(--fn-600);
+  margin-bottom: 1rem;
+}
+
+.price-below {
+  padding-top: 1rem;
+}
+
+.button {
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  display: inline-flex;
+  padding: 1em 6rem;
+  margin-top: 2rem;
+  font-weight: var(--fn-700);
+  background-color: hsl(var(--clr-bright-100));
+  color: white;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: hsl(var(--clr-bright-100), 0.9);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.span-2 {
+  margin-left: 0.6rem;
+  color: rgb(152, 209, 209);
+}
+
+@media (max-width: 450px) {
+  .community-box {
+    padding: 2rem 2rem 0rem 2rem;
+    padding: top;
+  }
+
+  .row-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .clr-1,
+  .clr-2 {
+    padding: 1rem 2rem 2.2rem 3rem;
+    border-radius: 0;
+  }
+}
